@@ -15,7 +15,7 @@ public class MainMenu {
 		System.out.println("Enter password");
 		String password = input.next();
 		
-		System.out.println("Have an account? Login here");
+		System.out.println("Don't have an account? Create one here");
 		
 		
 		
