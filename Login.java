@@ -15,7 +15,14 @@ public class Login {
 		System.out.println("Enter password");
 		String password = input.next();
 		if (password == u1.getPassword());
-
+		
+		System.out.println("Click here if you forgot password");
+		
+		System.out.println("Type in answer to security question");
+		System.out.println(u1.getSecurityQuestion());
+		String answer = input.next();
+		if (answer == u1.getSecurityAnswer());
+		
 	}
 
 }
