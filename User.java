@@ -15,6 +15,12 @@ public class User {
 	private int ssn;
 	private String securityQuestion;
 	
+	// Constructors
+	
+	public User (String username) {
+		this.username = username;
+	}
+	
 	//Setters and getters
 	
 	public String getFirstName() {
