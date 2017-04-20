@@ -1,4 +1,4 @@
-package system;
+package system.system;
 import java.util.Scanner;
 public class MainMenu {
 	
