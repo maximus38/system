@@ -12,7 +12,18 @@ Email varchar(20),
 Question varchar (50),
 Answer varchar (20)
 
+);
 
+CREATE TABLE `reservation`.`flights` (
 
+FlightNum Varchar (6) Primary key,
+Depart Char (15),
+Arrive Char (15),
+DepartDate varchar (10),
+ArriveDate varchar (10),
+DepartTime varchar (10),
+ArriveTime varchar (10),
+SeatsOpen int (3),
 
 );
+
