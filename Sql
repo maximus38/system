@@ -27,8 +27,8 @@ SeatsOpen int (3),
 
 );
 
-insert into user
-values (js45,test1,John,Smith,652347823,"3412 Lake Drive", 30004, GA, "john34@yahoo.com", "What is the brand of first car?", Honda);
-insert into user
-values (mr11,test2,Matt,Ryan,733879576,"1990 Mountain Drive" , 30625, GA, "matt89@gmail.com", "What is your mom's miaden name" , Jones);
+INSERT INTO USER
+VALUES (js45,test1,John,Smith,652347823,"3412 Lake Drive", 30004, GA, "john34@yahoo.com", "What is the brand of first car?", Honda);
+INSERT INTO USER
+VALUES (mr11,test2,Matt,Ryan,733879576,"1990 Mountain Drive" , 30625, GA, "matt89@gmail.com", "What is your mom's miaden name" , Jones);
 
