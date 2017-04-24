@@ -1,0 +1,18 @@
+CREATE TABLE `reservation`.`user` (
+
+UserName varchar(10) Primary Key,
+Passcode varchar(10),
+FirstName char(15),
+LastName char(15),
+Ssn int (9),
+Address varchar(30),
+ZipCode int(5),
+State char(2),
+Email varchar(20),
+Question varchar (50),
+Answer varchar (20)
+
+
+
+
+);
