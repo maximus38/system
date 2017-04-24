@@ -27,19 +27,13 @@ SeatsOpen int (3),
 
 );
 
-INSERT INTO USER
-VALUES (js45,test1,John,Smith,652347823,"3412 Lake Drive", 30004, GA, "john34@yahoo.com", "What is the brand of first car?", Honda);
-INSERT INTO USER
-VALUES (mr11,test2,Matt,Ryan,733879576,"1990 Mountain Drive" , 30625, GA, "matt89@gmail.com", "What is your mom's miaden name" , Jones);
+INSERT INTO `reservation`.`user` (`UserName`, `Passcode`, `FirstName`, `LastName`, `Ssn`, `Address`, `ZipCode`, `State`, `Email`, `Question`, `Answer`) VALUES ('js45', 'test1', 'John', 'Smith', '652347823', '3412 Lake Drive', '30004', 'GA', 'john34@yahoo.com', 'What is the brand of your first car', 'Honda');
+INSERT INTO `reservation`.`user` (`UserName`, `Passcode`, `FirstName`, `LastName`, `Ssn`, `Address`, `ZipCode`, `State`, `Email`, `Question`, `Answer`) VALUES ('mr11', 'test2', 'Matt', 'Ryan', '733879576', '1990 Mountain Drive', '30625', 'GA', 'matt89@gmail.com', 'What is your mon\'s maiden name', 'Jones');
 
-INSERT INTO flights
-VALUES (ol4023, Atlanta, Orlando , 05/10/2017, 05/10/2017, "2:30", "4:30", 200);
-INSERT INTO flights
-VALUES (la3498, Atlanta, "Los Angeles", 05/20/2017, 05/20/2017, "5:10", "10:10" , 220);
-INSERT INTO flights
-VALUES (as2389, Atlanta, Houston, 05/24/2017, 05/24/2017, "2:00" , "3:00", 200);
-INSERT INTO flights
-VALUES (ny8945, Atlanta, NewYork, 06/12/2017,06/12/2017, "3:00","7:00", 230);
-INSERT INTO flgihts
-VALUES (cl8912, Atlanta, Colorado, 06/15/2017, 06/15/2017, "4:00","8:00",200); 
+INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDate`, `ArriveDate`, `DepartTime`, `ArriveTime`, `SeatsOpen`) VALUES ('ol4023', 'Atlanta', 'Orlando', '05/10/2017', '05/10/2017', '2:30', '4:30', '150');
+INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDate`, `ArriveDate`, `DepartTime`, `ArriveTime`, `SeatsOpen`) VALUES ('la3498', 'Austin', 'Los Angeles', '05,20,2017', '05/20/2017', '5:10', '10:10', '220');
+INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDate`, `ArriveDate`, `DepartTime`, `ArriveTime`, `SeatsOpen`) VALUES ('as2389', 'Atlanta', 'Houston', '05/24/2017', '05/24/2017', '2:00', '4:00', '200');
+INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDate`, `ArriveDate`, `DepartTime`, `ArriveTime`, `SeatsOpen`) VALUES ('ny8945', 'Miami', 'NewYork', '06/12/2017', '06/12/2017', '3:00', '7:00', '230');
+INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDate`, `ArriveDate`, `DepartTime`, `ArriveTime`, `SeatsOpen`) VALUES ('cl8912', 'Atlanta', 'Colorado', '06/15/2017', '06/15/2017', '4:00', '8:00', '200');
+
 
