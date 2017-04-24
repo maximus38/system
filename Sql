@@ -32,3 +32,14 @@ VALUES (js45,test1,John,Smith,652347823,"3412 Lake Drive", 30004, GA, "john34@ya
 INSERT INTO USER
 VALUES (mr11,test2,Matt,Ryan,733879576,"1990 Mountain Drive" , 30625, GA, "matt89@gmail.com", "What is your mom's miaden name" , Jones);
 
+INSERT INTO flights
+VALUES (ol4023, Atlanta, Orlando , 05/10/2017, 05/10/2017, "2:30", "4:30", 200);
+INSERT INTO flights
+VALUES (la3498, Atlanta, "Los Angeles", 05/20/2017, 05/20/2017, "5:10", "10:10" , 220);
+INSERT INTO flights
+VALUES (as2389, Atlanta, Houston, 05/24/2017, 05/24/2017, "2:00" , "3:00", 200);
+INSERT INTO flights
+VALUES (ny8945, Atlanta, NewYork, 06/12/2017,06/12/2017, "3:00","7:00", 230);
+INSERT INTO flgihts
+VALUES (cl8912, Atlanta, Colorado, 06/15/2017, 06/15/2017, "4:00","8:00",200); 
+
