@@ -1,0 +1,64 @@
+public class CustomerClass {
+
+	CustomerClass(){
+		
+	}
+	
+	
+	public int getreturnDate() {
+
+		return 0;
+	}
+
+
+	public String getReturnDate() {
+		
+		return null;
+
+	}
+
+	public String getStartDate() {
+		
+		return null;
+	}
+
+	public int getArrive() {
+
+		return 0;
+	}
+
+	public String getDepart() {
+
+		return null;
+	}
+
+	public String getflightInfo() {
+
+		return null;
+	}
+
+	void setReturnDate(String nextLine) {
+
+		
+	}
+
+	public void setStartDate(String nextLine) {
+
+		
+	}
+
+	public void setArrive(String nextLine) {
+
+		
+	}
+
+	public void setdepart(String nextLine) {
+		
+	}
+
+	public void setflightInfo(String nextLine) {
+		
+	}
+	
+	
+}
