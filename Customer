@@ -1,0 +1,78 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Customer extends User{
+	
+	public static void main(String[] args) {
+		
+		CustomerClass  cust1 = new CustomerClass(); 
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter flight info");	
+		
+		String flightInfo = input.nextLine();
+		
+		cust1.setflightInfo(input.nextLine());
+		
+		System.out.println("Enter city to fly from");
+		
+		String depart = input.nextLine();
+		
+		cust1.setdepart(input.nextLine());
+		
+		System.out.println("Enter city to fly to");
+		
+		String arrive = input.nextLine();
+		
+		cust1.setArrive(input.nextLine());
+		
+		System.out.println("Enter available date");
+		
+		String startDate = input.nextLine();
+		
+		cust1.setStartDate(input.nextLine());
+		
+		System.out.println("Enter Return date");
+		
+		String returnDate = input.nextLine();
+		
+		cust1.setReturnDate(input.nextLine());
+	
+	
+	
+	String url = "jdbc:mysql://localhost:3306/reservation?useSSL=false";
+	String user = "root";
+	String password = "1145";
+	
+	try {
+		// get connection to database
+
+		Connection myConn = DriverManager.getConnection(url, user, password);
+		
+
+		// Create statement
+
+		Statement myStmt = myConn.createStatement();
+		
+		String sql = "INSERT INTO user VALUES ('" + cust1.getflightInfo() + "','" +cust1.getDepart()+ "','"+cust1.getArrive()+ "','" + cust1.getStartDate() + "','"+ cust1.getreturnDate()+ "')";
+
+		System.out.println("12");
+		
+		myStmt.executeUpdate(sql);
+		
+		System.out.println("15");
+		
+		System.out.println("Insert complete");
+	} 
+	
+	catch (Exception ex) {
+		
+		System.out.println("3");
+		System.out.println("Did not work");
+	}
+	
+}	
