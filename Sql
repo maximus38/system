@@ -41,6 +41,6 @@ FlightNum varchar (6),
 UserName varchar (15),
 PRIMARY KEY (FlightNum),
 Foreign KEY (UserName) REFERENCES user (UserName)
-);
+); 
 
 
