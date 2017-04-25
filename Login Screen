@@ -1,0 +1,30 @@
+
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
+
+public class Registration extends JFrame {
+  public Registration() {
+    
+    setLayout(new FlowLayout(FlowLayout.LEFT, 5, 20));
+
+    //Login info
+    add(new JLabel("Enter Username"));
+    add(new JTextField(10));
+    add(new JLabel("Enter Passcode"));
+    add(new JTextField(10));
+  
+    
+  }
+
+
+  public static void main(String[] args) {
+    Registration frame = new Registration();
+    frame.setTitle("Login");
+    frame.setSize(160, 250);
+    frame.setLocationRelativeTo(null); 
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}
