@@ -1,0 +1,74 @@
+
+import javax.swing.JLabel;
+
+import javax.swing.JTextField;
+
+import javax.swing.JFrame;
+
+import java.awt.FlowLayout;
+
+public class Registration1 extends JFrame {
+
+  public Registration1() {
+    
+    setLayout(new FlowLayout(FlowLayout.LEFT, 5, 10));
+
+    // register!!!!!
+  
+  add(new JLabel("Enter First name"));
+  
+  add(new JTextField(15));
+  
+  add(new JLabel("Enter Middle Initial"));
+  
+  add(new JTextField(1));
+  
+  add(new JLabel("Enter Last name"));
+  
+  add(new JTextField(15));
+  
+  add(new JLabel("Enter Social Security Number (No dashes)"));
+  
+  add(new JTextField(9));
+  
+  add(new JLabel("Enter Current Home Address"));
+  
+  add(new JTextField(30));
+  
+  add(new JLabel("Enter Zip Code"));
+  
+  add(new JTextField(5));
+  
+  add(new JLabel("Enter State"));
+  
+  add(new JTextField(2));
+  
+  add(new JLabel("Enter email"));
+  
+  add(new JTextField(20));
+  
+  add(new JLabel("Enter Security Question"));
+  
+  add(new JTextField(50));
+  
+  add(new JLabel("Enter Answer"));
+  
+  add(new JTextField(20));
+
+  }
+
+  public static void main(String[] args) {
+   
+   Registration1 frame = new Registration1();
+   
+   frame.setTitle("Login");
+   
+   frame.setSize(1200, 150);
+   
+   frame.setLocationRelativeTo(null); 
+   
+   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   
+   frame.setVisible(true);
+  }
+}
