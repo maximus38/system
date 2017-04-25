@@ -1,0 +1,35 @@
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
+
+public class ShowFlowLayout extends JFrame {
+  public ShowFlowLayout() {
+    
+    setLayout(new FlowLayout(FlowLayout.LEFT, 10, 30));
+
+    // Criteria for finding a flight
+    add(new JLabel("Search for Flight Info"));
+    add(new JTextField(8));
+    add(new JLabel("Search for flights from available cities"));
+    add(new JTextField(20));
+    add(new JLabel("Search for flights to available cities"));
+    add(new JTextField(20));
+    add(new JLabel("Search for available dates"));
+    add(new JTextField(10));
+    add(new JLabel("Search for available return dates"));
+    add(new JTextField(10));
+    
+    
+  }
+
+
+  public static void main(String[] args) {
+    ShowFlowLayout frame = new ShowFlowLayout();
+    frame.setTitle("Find a flight!");
+    frame.setSize(300, 500);
+    frame.setLocationRelativeTo(null); 
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+  }
+}
