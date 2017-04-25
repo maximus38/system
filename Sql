@@ -36,4 +36,11 @@ INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDat
 INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDate`, `ArriveDate`, `DepartTime`, `ArriveTime`, `SeatsOpen`) VALUES ('ny8945', 'Miami', 'NewYork', '06/12/2017', '06/12/2017', '3:00', '7:00', '230');
 INSERT INTO `reservation`.`flights` (`FlightNum`, `Depart`, `Arrive`, `DepartDate`, `ArriveDate`, `DepartTime`, `ArriveTime`, `SeatsOpen`) VALUES ('cl8912', 'Atlanta', 'Colorado', '06/15/2017', '06/15/2017', '4:00', '8:00', '200');
 
+CREATE TABLE `bookflight` (
+FlightNum varchar (6),
+UserName varchar (15),
+PRIMARY KEY (FlightNum),
+Foreign KEY (UserName) REFERENCES user (UserName)
+);
+
 
