@@ -1,45 +1,81 @@
 package system;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.util.Scanner;
+
 public class Registration {
-	
-	public static void main (String [] args) {
+
+	public static void main(String[] args) {
 		
+		//Sql
+
+		String url = "jdbc:mysql://localhost:3306/reservation?useSSL=false";
+		String user = "root";
+		String password = "1145";
+		
+		//Input data
+
 		User user1 = new User();
-		Scanner input = new Scanner (System.in);
+		Scanner input = new Scanner(System.in);
 		System.out.println("Enter First Name");
 		user1.setFirstName(input.nextLine());
-		
+
 		System.out.println("Enter Last Name");
 		user1.setLastName(input.nextLine());
-		
+
 		System.out.println("Enter address");
 		user1.setAddress(input.nextLine());
-		
+
 		System.out.println("Enter zip");
 		user1.setZipCode(input.nextInt());
-		
+
 		System.out.println("Enter state");
 		user1.setState(input.next());
-		
+
 		System.out.println("Create a username");
 		user1.setUsername(input.next());
-		
+
 		System.out.println("Create a valid password");
-		user1.setPassword(input.next());
-		
+		user1.setPasscode(input.next());
+
 		System.out.println("Enter email");
 		user1.setEmail(input.next());
-		
+
 		System.out.println("Enter SSN" + " (No dashes)");
 		user1.setSsn(input.nextInt());
-		
+
 		System.out.println("Enter a security question");
 		user1.setSecurityQuestion(input.next());
-		
+
 		System.out.println("Enter the answer to security question");
 		user1.setSecurityAnswer(input.next());
 		
-		
-	}
+		try {
+			// get connection to database
 
+			Connection myConn = DriverManager.getConnection(url, user, password);
+			
+
+			// Create statement
+
+			Statement myStmt = myConn.createStatement();
+			
+
+			// ExecuteQuery
+
+			String sql = "INSERT INTO user VALUES ('" + user1.getUsername() +  "','" + user1.getPasscode() + 
+					"','" + user1.getFirstName() + "','" + user1.getLastName() + "','" + user1.getSsn() + "','" + user1.getAddress() +
+					"','" + user1.getZipCode() + "','" + user1.getState() + "','" + user1.getEmail() + "','" +
+					user1.getSecurityQuestion() + "','" + user1.getSecurityAnswer() + "')";
+			myStmt.executeUpdate(sql);
+
+			System.out.println("Insert complete");
+		} catch (Exception ex) {
+			System.out.println("Did not work");
+		}
+
+	}
 }
+
