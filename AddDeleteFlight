@@ -1,0 +1,79 @@
+package system;
+
+import java.util.Scanner;
+import java.sql.*;
+
+public class AddFlight {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		// Sql address
+
+		String url = "jdbc:mysql://localhost:3306/reservation?useSSL=false";
+		String user = "root";
+		String password = "1145";
+
+		System.out.println("Enter 1 if you wish to book flight");
+		System.out.println("Enter 2 if you wish to delete flight");
+		int response = input.nextInt();
+
+		if (response == 1) {
+
+			System.out.println("Enter username");
+			String username = input.next();
+
+			System.out.println("Enter flight number you wish to book");
+			String flight = input.next();
+
+			try {
+				// get connection to database
+
+				Connection myConn = DriverManager.getConnection(url, user, password);
+
+				// Create statement
+
+				Statement myStmt = myConn.createStatement();
+
+				// ExecuteQuery
+
+				String sql = "INSERT INTO bookflight VALUES ('" + flight + "','" + username + "')";
+				myStmt.executeUpdate(sql);
+
+				System.out.println("Insert complete");
+
+			} catch (Exception ex) {
+				System.out.println("Did not work");
+			}
+		} else if (response == 2) {
+
+			System.out.println("Enter username");
+			String username = input.next();
+
+			System.out.println("Enter flight number you wish to delete");
+			String flight = input.next();
+
+			try {
+				// get connection to database
+
+				Connection myConn = DriverManager.getConnection(url, user, password);
+
+				// Create statement
+
+				Statement myStmt = myConn.createStatement();
+
+				// ExecuteQuery
+
+				String sql = "DELETE FROM bookflight WHERE UserName='" + username + "' AND FlightNum='" + flight + "'";
+				myStmt.executeUpdate(sql);
+
+				System.out.println("Delete complete");
+
+			} catch (Exception ex) {
+				System.out.println("Did not work");
+			}
+		}
+
+	}
+
+}
