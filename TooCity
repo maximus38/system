@@ -25,6 +25,8 @@ public class SearchFlightToCity {
 		String city = input.next();
 
 		try {
+		
+			//Show depart flight from select city
 			// get connection to database
 
 			Connection myConn = DriverManager.getConnection(url, user, password);
@@ -45,6 +47,20 @@ public class SearchFlightToCity {
 			System.out.println("Did not work");
 
 		}
+		
+			System.out.println("Enter 0 to go back to main menu \n Enter 1 to add/delete a flight "
+				+ "by depart city \n Enter 2 to search for flight based on depart city \n"
+				+ "\n or 3 to terminate ");
+		int number;
+		number = input.nextInt();
+		if (number == 0)
+			MainMenu.main(args);
+		else if (number == 1)
+			AddFlight.main(args);
+		else if (number == 2)
+			SearchFlightFromCity.main(args);
+		else if (number == 3)
+			System.exit(0);
 	}
 
 }
