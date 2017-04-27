@@ -25,6 +25,8 @@ public class SearchFlightFromCity {
 		String city = input.next();
 
 		try {
+		
+			//Search flight based on depart city
 			// get connection to database
 
 			Connection myConn = DriverManager.getConnection(url, user, password);
