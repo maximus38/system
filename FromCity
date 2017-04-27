@@ -45,6 +45,19 @@ public class SearchFlightFromCity {
 			System.out.println("Did not work");
 
 		}
+		System.out.println("Enter 0 to go back to main menu \n Enter 1 to add/delete a flight "
+				+ "by depart city \n Enter 2 to search for flight based on arrival city \n"
+				+ "\n or 3 to terminate ");
+		int number;
+		number = input.nextInt();
+		if (number == 0)
+			MainMenu.main(args);
+		else if (number == 1)
+			AddFlight.main(args);
+		else if (number == 2)
+			SearchFlightToCity.main(args);
+		else if (number == 3)
+			System.exit(0);
 	}
 
 }
