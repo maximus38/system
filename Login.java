@@ -58,13 +58,20 @@ public class Login {
 			} catch (Exception ex) {
 				System.out.println("Did not work");
 			}
-			System.out.println("Enter 0 to go back to main menu or 3 to terminate ");
+		           System.out.println("Enter 0 to go back to main menu \n Enter 1 to search for flight "
+					+ "by depart city \n Enter 2 to search for flight based on arrival city \n Enter 3 to book/delete a flight"
+					+ "\n or 4 to terminate ");
 			number = input.nextInt();
 			if (number == 0)
 				MainMenu.main(args);
+			else if (number == 1)
+				SearchFlightFromCity.main(args);
+			else if (number == 2)
+				SearchFlightToCity.main(args);
 			else if (number == 3)
+				AddFlight.main(args);
+			else if (number == 4)
 				System.exit(0);
-
 		}
 	}
 
