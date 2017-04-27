@@ -75,6 +75,12 @@ public class Registration {
 		} catch (Exception ex) {
 			System.out.println("Did not work");
 		}
+		System.out.println("Enter 0 to go back to main menu or 3 to terminate ");
+		int number = input.nextInt();
+		if (number == 0) 
+			MainMenu.main(args);
+		else if (number == 3)
+			System.exit(0);
 
 	}
 }
